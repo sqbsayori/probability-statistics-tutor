@@ -89,6 +89,8 @@ probability-statistics-tutor/
 ├── LICENSE                           # MIT 许可证
 ├── README.md                         # 本文件
 ├── .gitignore                        # Git 忽略规则
+├── DEPLOY.md                         # 本地+ima双轨部署方案
+├── TODO.md                           # 待办清单与进度跟踪
 └── references/
     ├── curriculum.md                 # 全12章知识点体系（850行，67KB，含189个知识点的微步骤）
     ├── textbook-examples.md          # 教材例题索引（265行，模板版，含4道示例例题）
@@ -118,6 +120,19 @@ probability-statistics-tutor/
 | `/probability-statistics-tutor` | 启动概率论学习导师，首次使用进入注册流程，之后进入章节选择 |
 
 > 启动后所有交互均为对话式：选择章节 → 微步教学 → 答题测验 → 进度保存，无需额外命令。
+
+---
+
+## 部署
+
+本 Skill 支持两种内容检索后端，可并行运行：
+
+| 轨道 | 后端 | 启动方式 | 适用场景 |
+|------|------|----------|---------|
+| A | 本地文件系统 | 默认 | 离线使用、Git 仓库自带图片 |
+| B | ima 知识库 | 配置 `IMA_KB_ID` | 语义搜索、跨设备、云端图库 |
+
+详细部署步骤、环境变量配置、分支策略和冲突处理见 **[DEPLOY.md](DEPLOY.md)**。
 
 ---
 
