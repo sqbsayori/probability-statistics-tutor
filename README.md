@@ -53,7 +53,7 @@
 
 将本仓库的 GitHub 链接发给 WorkBuddy，对它说：
 
-> 请帮我安装这个 skill：https://github.com/<user>/probability-statistics-tutor
+> 请帮我安装这个 skill：https://github.com/sqbsayori/probability-statistics-tutor
 
 WorkBuddy 会自动克隆并安装。
 
@@ -61,7 +61,7 @@ WorkBuddy 会自动克隆并安装。
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/<user>/probability-statistics-tutor.git
+git clone https://github.com/sqbsayori/probability-statistics-tutor.git
 
 # 2. 复制到 WorkBuddy skills 目录
 cp -r probability-statistics-tutor ~/.workbuddy/skills/
@@ -85,16 +85,29 @@ cp -r probability-statistics-tutor ~/.workbuddy/skills/
 
 ```
 probability-statistics-tutor/
-├── SKILL.md                          # 主教学逻辑文件（1040行）
+├── SKILL.md                          # 主教学逻辑文件（1040行，v1.0）
 ├── LICENSE                           # MIT 许可证
 ├── README.md                         # 本文件
 ├── .gitignore                        # Git 忽略规则
 └── references/
-    ├── curriculum.md                 # 全12章知识点体系（850行，67KB）
-    ├── textbook-examples.md          # 教材例题索引（例题→图片映射）
-    ├── problem-solving-method.md     # STEP-Prove 双轨解题法
-    └── textbook_images/              # 教材图片（从教材PDF逐页提取的PNG）
+    ├── curriculum.md                 # 全12章知识点体系（850行，67KB，含189个知识点的微步骤）
+    ├── textbook-examples.md          # 教材例题索引（265行，模板版，含4道示例例题）
+    ├── problem-solving-method.md     # STEP-Prove 双轨解题法（297行）
+    └── textbook_images/              # 教材图片（待从教材PDF提取，当前为空）
 ```
+
+## 当前状态
+
+| 模块 | 状态 | 说明 |
+|------|------|------|
+| SKILL.md | ✅ 完成 | 完整的教学系统定义，所有功能机制已就绪 |
+| curriculum.md | ✅ 完成 | 全12章189个知识点均含微步骤设计 |
+| problem-solving-method.md | ✅ 完成 | STEP计算法+Prove证明法双轨解题框架 |
+| textbook-examples.md | ⚠️ 模板 | 仅含4道示例例题，待根据教材补充完整例题 |
+| textbook_images/ | ❌ 为空 | 待从教材PDF提取例题配图 |
+| README / LICENSE / .gitignore | ✅ 完成 | 项目文档和配置就绪 |
+
+> **下一步**：从《概率论与数理统计》教材中提取例题配图，并填充 `textbook-examples.md` 中的例题详解。详见 [TODO.md](TODO.md)。
 
 ---
 
